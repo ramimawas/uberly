@@ -26,8 +26,8 @@ def print_tweets(tweets):
 def print_tweet(tweet):
   print '[' + str(tweet.created_at) + ']: <' + tweet.text + '>\n'
   
-auth = tweepy.OAuthHandler('WTAkclxY6ROtIHxOIv5yfD0Jd', 'FG3O5xhkB40SS5VOHSPkUVJLK2chnHo8qAZKFuA42k7sJAEPx0')
-auth.set_access_token('12969442-25I4FUpAsPFrDEVhFpd3dM0YTrKMQmfp4jf2hXVAU', 'a63TefhlMDPlQK4aOUJME7DLZqYThxm3EFcCnm8HYjYsd')
+auth = tweepy.OAuthHandler('', '')
+auth.set_access_token('', '')
 
 #api = tweepy.API(auth, proxy="127.0.0.1:8888")
 api =  tweepy.API(auth)
