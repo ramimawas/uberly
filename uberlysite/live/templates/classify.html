@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<!--
+MIT Licensed
+Copyright 2014 REM <rami.developer@gmail.com>.
+-->
+<html>
+  <head>
+    
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.11.1/themes/smoothness/jquery-ui.css">
+    <script src="//code.jquery.com/jquery-1.10.2.js"></script>
+    <script src="//code.jquery.com/ui/1.11.1/jquery-ui.js"></script>
+    <script type="text/javascript" src="https://modjax.googlecode.com/svn/trunk/jquery.mjax.js"></script>
+    <script type="text/javascript" src="/static/classify.mjax.js"></script>
+    
+    
+    
+    <title>Uberly Twitter Classification</title>
+    <script type="text/javascript">
+      function incSize(event) {
+        var size = event.value.length; 
+        event.setAttribute("size", size+1);
+        event.setAttribute("style", "width:auto")    
+      }
+    </script>
+  </head>
+  <body>
+    <div>
+      Tweet: <input id="tweet" type="text" name="tweet" value="{{tweet}}" style="width: auto" onkeyup="incSize(this)">
+    </div>
+    <div>
+      Class: <span id="class">{{class}}</span>
+    </div>
+    <div>
+      <input id="classify" type="submit" value="Classify">
+    </div>
+  </body>
+</html>
