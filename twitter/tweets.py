@@ -9,11 +9,6 @@ import datetime
 import os
 import subprocess
 
-proc = subprocess.Popen(['cd octave && octave -q predict.m "Aggressive growth strategy for #Uber http://t.co/Bre8zukWRB by @semilshah | Boom! Exciting. http://t.co/OCtW9WBmLh"'], stdout=subprocess.PIPE, shell=True)
-(out, err) = proc.communicate()
-print "program output:", out
-exit()
-
 client = MongoClient('localhost', 27017)
 db = client.uberly
 clt = db.tweets
