@@ -6,7 +6,7 @@ import json
 classifyer = Classifyer()
 
 def index(request):
-    return HttpResponse("Uberly")
+  return HttpResponse("Uberly")
   
 def build_response(request):
   tweet = request.GET.get('tweet')

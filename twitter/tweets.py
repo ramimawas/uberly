@@ -6,7 +6,6 @@ from pymongo import MongoClient
 import utility
 import sys
 import datetime
-import os
 import subprocess
 
 client = MongoClient('localhost', 27017)
@@ -54,7 +53,7 @@ for status in tweepy.Cursor(api.search, q=query, count=count, lang='en').items()
   utility.dump(tweet)
   i += 1
   #os.system('cd octave && octave predict.m "' + status.text.replace('"','\\"') + '"');
-  
+
   proc = subprocess.Popen(['cd octave && octave -q predict.m "' + status.text.replace('"','\\"') + '"'], stdout=subprocess.PIPE, shell=True)
   (out, err) = proc.communicate()
   print "program output:", out

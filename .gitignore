@@ -1,3 +1,4 @@
 env/
 nbproject/
 *.pyc
+.DS_Store
